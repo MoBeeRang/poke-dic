@@ -1,0 +1,109 @@
+.TodoListItem {
+   padding: 1rem;
+   /* display: flex; */
+   align-items: center;
+}
+
+.TodoListItem:nth-child(even) {
+   background: #f8f9fa;
+}
+
+.TodoListItem .checkbox {
+   /* cursor: pointer; */
+   /* flex: 1; */
+   /* display: flex; */
+   align-items: center;
+}
+
+.TodoListItem .checkbox svg {
+   font-size: 1.5rem;
+}
+
+.TodoListItem .checkbox .name {
+   margin-left: 0.5rem;
+   flex: 1;
+}
+
+.TodoListItem .checkbox.checked svg {
+   color: #22b8cf;
+}
+
+.TodoListItem .checkbox.checked .name {
+   color: #adb5bd;
+   text-decoration: line-through;
+}
+
+.TodoListItem .remove {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15px;
+   font-size: 1.5rem;
+   color: #c72d2d;
+   /* cursor: pointer; */
+}
+
+.TodoListItem .remove:hover {
+   color: #ff8787;
+}
+ul {
+   display: flex;
+   width: 100%;
+   padding: 0;
+   flex-wrap: wrap;
+}
+
+li {
+   width: 133px;
+   list-style-type: none;
+   /* 다른 스타일 속성들도 있을 수 있습니다. */
+   /* border: 1px solid black; */
+   /* width: 16.55%; */
+   text-align: center;
+}
+
+.TodoListItem .checkbox .img {
+   width: 100px;
+   height: 100px;
+   filter: grayscale(0);
+}
+
+.TodoListItem .checkbox.checked .img {
+   filter: grayscale(100%);
+}
+
+.cardBorder {
+   cursor: pointer;
+   padding: 15px;
+   border: 1px solid rgb(224, 224, 224);
+   border-radius: 10px;
+}
+
+.TodoListItem .remove .button {
+   background: #a16262;
+   padding: 10px;
+   border-radius: 10px;
+   border: 0;
+   cursor: pointer;
+   color: #ffffff;
+}
+
+.TodoListItem .remove .button:hover {
+   background: #da3833;
+   color: #ffffff;
+}
+
+.TodoListItem .change .button {
+   margin-top: 10px;
+   background: #9da162;
+   padding: 10px;
+   border-radius: 10px;
+   border: 0;
+   cursor: pointer;
+   color: #ffffff;
+}
+
+.TodoListItem .change .button:hover {
+   background: #dad733;
+   color: #ffffff;
+}
