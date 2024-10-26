@@ -77,18 +77,23 @@ function App() {
    //진화시키기. 진화리스트에 없는 포켓몬은 진화하지 않는다.
    const onNextGeneration = useCallback(
       (id) => {
-         const nextPokes = pokes.map((poke, idx) => {
+         const nextPokes = pokes.map((poke) => {
             let nextGenName = poke.name
             //해당 포켓몬의 다음 진화내용이 있으면 이름을 가져온다.
             if (poke.id === id) {
                for (let i = 0; i < nextGenList.length; i++) {
+                  let res = false
                   let genmap = nextGenList[i]
                   let getlistkeys = Object.keys(genmap)
                   for (let j = 0; j < getlistkeys.length; j++) {
                      if (genmap[getlistkeys[j]] === poke.name && j < getlistkeys.length - 1) {
                         nextGenName = genmap[getlistkeys[j + 1]]
+                        res = true
+                        break
                      }
                   }
+                  if (res) break
+                  
                }
             }
             return poke.id === id ? { ...poke, name: nextGenName, img: '/images/' + nextGenName + '.png' } : poke
